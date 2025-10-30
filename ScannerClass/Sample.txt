@@ -1,0 +1,6 @@
+This is sample data file.
+You should select me as a Google Ambassador because I have strong technical skills in programming (Python, Java, and web development) and I am continuously learning about cloud computing and AI/ML. I have already worked on projects like [mention one project briefly], which shows my ability to apply technical knowledge practically.
+
+At the same time, I am passionate about community building – I enjoy mentoring my classmates, sharing knowledge, and organizing workshops. As an ambassador, I can use my technical skills and communication ability to conduct sessions on Google technologies like Firebase, TensorFlow, and Google Cloud, helping students adopt these tools in their projects.
+
+By selecting me, Google will get a motivated leader who can spread awareness, inspire innovation, and strengthen the student developer community in my college
