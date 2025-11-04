@@ -77,19 +77,23 @@ public class SubArrayExample
 
 public static void method4(int[] arr,int k)
 {
-	int l=k;
-	int r=arr.length;
+	int l=k-1;
+	int r=arr.length-1;
 	
-	while(l>=0)
+	for(int i=k;i>=0;i--)
 	{
-		for(int i=0;i<4;i++)
-		{
-			System.out.print(arr[l]);
-			
-			System.out.print(arr[r]);
-			l--;
-			r--;
-		}
+		System.out.print(arr[i]);
 	}
+	
+	
 }
+}
+
+public class Prototype
+{
+	
+	public Prototype getInstance()
+	{
+		return new Prototype();
+	}
 }
