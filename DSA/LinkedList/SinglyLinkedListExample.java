@@ -27,6 +27,7 @@ public class SinglyLinkedListExample
 		if(head==null)
 		{
 			head=newNode;
+			tail=newNode;
 			return;
 		}
 		
