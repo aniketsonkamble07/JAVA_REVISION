@@ -78,23 +78,141 @@ public class ArrayExample
 			System.out.print(arr[k]+ "\t");
 		}
 	}
-	
+	// sored array
 	public static void findDuplicate(int[] arr)
 	{
-		int j;
-		int k=0;
-		for(int i=0;i<arr.length-1;i++)
+		int n=arr.length;
+		int i=0;
+		while(i<n-1)
 		{
-			j=i+1;
-			if(arr[i]==arr[j])
+			if(arr[i]==arr[i+1])
 			{
-				while(j<arr.length-1-k)
+				for(int j=i+1;j<n-1;j++)
 				{
 					arr[j]=arr[j+1];
-					j++;
+					
 				}
-				k++;
+				n--;
+			}
+			else
+			{
+				i++;
 			}
 		}
+	}
+	
+	public static int removeUnsortedDuplicate(int[] arr)
+	{
+		int n=arr.length;
+		for(int i=0;i<n-1;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(arr[j]==arr[j+1])
+				{
+				   for (int k = j; k < n - 1; k++) 
+				   {
+                     arr[k] = arr[k + 1];
+                    }
+                n--;
+                j--;
+				}
+			}
+		}
+		return n;
+	}
+	
+	public static void removeDuplicateSet(int[] arr)
+	{
+		 Set<Integer> set = new HashSet<>();
+
+    for (int i = 0; i < arr.length; i++) 
+	{
+        set.add(arr[i]);
+    }
+
+    // convert Set<Integer> to int[]
+    int[] result = new int[set.size()];
+    int index = 0;
+
+    for (int value : set) 
+	{
+        result[index++] = value;
+    }
+
+    return result;
+		
+	}
+	
+	public static void reverseArray(int[] arr)
+	{
+		int[] newArr=new int[arr.length];
+		int index=0;
+		for(int  i=arr.length-1;i>=0;i--)
+		{
+			newArr[index]=arr[i];
+			index++;
+		}
+	}
+	
+	public static void reverseArray2(int[] arr)
+	{
+		int j=arr.length-1;
+		int i=0;
+		while(i<j)
+		{
+			int temp=arr[i];
+			arr[i]=arr[j];
+			arr[j]=temp;
+			i++;
+			j--;
+		}
+	}
+	
+	public static boolean isSorted(int[] arr)
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]>arr[i+1])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static void abc(int[] arr, int value)
+	{
+		int sum;
+		int start=0;
+		int end=0;
+		int j;
+		int max=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			
+			sum=0;
+			j=i;
+			while(sum<value && j< arr.length)
+			{
+				sum=sum+arr[j];
+				j++;
+			}
+			if(max<j-i+1)
+			{
+				max=j-i+1;
+				start=i;
+				end=j;
+			}
+		}
+		
+		System.out.println("arra elements are");
+		sum=0;
+		for(int i=start;i<end;i++)
+		{
+			System.out.print(arr[i]+"\t");
+			sum+=arr[i];
+		}
+		System.out.println("\n Sum= "+sum);
 	}
 }

@@ -46,4 +46,32 @@
 		 }
 		 return flag;
 	 }
+	 /*
+	 class Student 
+	 {
+    String name;
+    int rollno;
+
+    @Override
+    public boolean equals(Object obj) {
+        // 1. Check if obj is null
+        if (obj == null) return false;
+
+        // 2. Check if obj is same type
+        if (!(obj instanceof Student)) return false;
+
+        // 3. Cast obj to Student
+        Student s = (Student) obj;
+
+        // 4. Compare fields
+        return this.name.equals(s.name) && this.rollno == s.rollno;
+    }
+	@Override
+    public int hashCode() 
+	{
+        return name.hashCode() + rollno;
+    }
+   }
+   */
+
  }

@@ -78,4 +78,43 @@ public class ArrayExample
 
         return arr[position - 1];
     }
+	
+	public static int[] subArray(int[] arr , int key)
+	{
+		
+		int j=0;
+		int sum=0;
+		int max=0;
+		int start;
+		int end;
+		
+		while(i<arr.length)
+		{
+			while(sum<key)
+			{
+				sum=sum+arr[i];
+				if(sum>max)
+				{
+					max=sum;
+					start=j;
+					end=i;
+				}
+				i++;
+			}
+			
+			while(sum>key)
+			{
+				sum=sum-arr[j];
+				j--;
+			}	
+		}
+		int[] ans=new int[end-start];
+		int index=0;
+		for(int i=start;i<end;i++)
+		{
+			ans[index]=arr[i];
+			index++
+		}
+		return ans;
+	}
 }
