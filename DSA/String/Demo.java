@@ -24,6 +24,13 @@
 		 System.out.println(ch2);
 		 System.out.println("Are the String palindrome "+ isPalindrome("maam"));
 		 
+		s2= s2.replace("A", "S");
+		 
+		 System.out.println(s2);
+		 s1=s1.replace("abc", "xyz");
+		 System.out.println(s1);
+		 System.out.println(s1.indexOf("x"));
+		 
 	 }
 	 
 	 public static boolean isPalindrome(String str)
