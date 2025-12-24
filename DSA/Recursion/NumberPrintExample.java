@@ -69,6 +69,34 @@ public class NumberPrintExample
 		int rem=n%10;
 		return rem* (int)Math.pow(10, digits-1)+ helper(n/10, digits-1);
 	}
+	/*
+	class Solution {
+    public int reverse(int x) {
+        boolean negative = x < 0;
+        x = Math.abs(x);
+
+        int digit = (x == 0) ? 1 : (int) Math.log10(x) + 1;
+
+        long ans = helper(x, digit);
+
+        if (negative) ans = -ans;
+
+        if (ans > Integer.MAX_VALUE || ans < Integer.MIN_VALUE)
+            return 0;
+
+        return (int) ans;
+    }
+
+    public long helper(int x, int digit) {
+        if (x == 0)
+            return 0;
+
+        int rem = x % 10;
+        return rem * (long) Math.pow(10, digit - 1)
+                + helper(x / 10, digit - 1);
+    }
+}
+*/
 	
 	public static int countZero(int n, int c)
 	{
