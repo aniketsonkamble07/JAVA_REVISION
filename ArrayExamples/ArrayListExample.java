@@ -25,4 +25,26 @@ public class ArrayListExample
 		
 		System.out.println(arr);
 	}
+	
+	public static void rotateArrayList(ArrayList<Integer> arr, int k)
+	{
+		k=k%arr.size();
+		
+		ArrayList<Integer> temp=new ArrayList<Integer>();
+		for(int i=0;i<k;i++)
+		{
+			temp.add(arr.get(i));
+		}
+		
+		for(int i=k;i<arr.size();i++)
+		{
+			arr.set(i-k,arr.get(i));
+		}
+		
+		for(int i=0;i<k;i++)
+		{
+			arr.set(arr.size()-k+i, temp.get(i));
+			
+		}
+	}
 }

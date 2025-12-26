@@ -1,6 +1,7 @@
 import java.util.*;
 
-public class SequentialChainingExample {
+public class SequentialChainingExample 
+{
 
     static int N;
     static LinkedList<Integer>[] buckets;
