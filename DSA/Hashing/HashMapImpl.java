@@ -4,7 +4,8 @@ public class HashMapImpl
 {
 
     // Node class
-    static class Node {
+    static class Node 
+	{
         String key;
         int value;
 
@@ -96,6 +97,22 @@ public class HashMapImpl
         }
         return false;
     }
+	/*  We cant remove using for each loop
+	public static boolean delete(String key)
+	{
+		int index=hash(key);
+		LinkedList<Node> list=bucket[index];
+		for(Node node : list)
+		{
+			if(node.Key.equals(key))
+			{
+				list.remove(node);
+				return true
+			}
+		}
+		return false;
+	}
+	*/
 
     // Rehashing
     public static void rehash(int newSize) 
